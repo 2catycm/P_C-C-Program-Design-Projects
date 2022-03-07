@@ -1,0 +1,638 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>report</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1.25em ;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="cs205-c-c-programming---project-1" class="md-header-anchor"></a><span>CS205 C/ C++ Programming - Project 1</span></h1><p><strong><span>Name</span></strong><span>：叶璨铭(Ye CanMing)</span></p><p><strong><span>SID</span></strong><span>：12011404</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#cs205-c-c-programming---project-1">CS205 C/ C++ Programming - Project 1</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" href="#part-1---analysis">Part 1 - Analysis</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n8"><a class="md-toc-inner" href="#1-1-the-goal-of-this-project">1-1 The goal of this project</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n22"><a class="md-toc-inner" href="#1-2-some-problems-to-consider">1-2 Some problems to consider</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n30"><a class="md-toc-inner" href="#part-2---code">Part 2 - Code</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n41"><a class="md-toc-inner" href="#part-3---result--verification">Part 3 - Result &amp; Verification</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n42"><a class="md-toc-inner" href="#3-1-computation-result-correctness">3-1 computation result correctness</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n43"><a class="md-toc-inner" href="#3-1-1-basic-cases">3-1-1 basic cases</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n58"><a class="md-toc-inner" href="#3-1-2-negative-numbers">3-1-2 negative numbers</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n66"><a class="md-toc-inner" href="#3-1-3-invalid-input">3-1-3 invalid input</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n75"><a class="md-toc-inner" href="#3-1-4-big-integer">3-1-4 big integer</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n84"><a class="md-toc-inner" href="#3-2-time-complexity-experiment不同乘法算法的时间复杂度测试实验">3-2 time complexity experiment：不同乘法算法的时间复杂度测试实验</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n87"><a class="md-toc-inner" href="#3-2-1-实验模型乘法算法的输入模型与成本模型">3-2-1 实验模型：乘法算法的输入模型与成本模型</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n88"><a class="md-toc-inner" href="#3-2-1-1-输入模型">3-2-1-1 输入模型</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n134"><a class="md-toc-inner" href="#3-2-1-1-成本模型">3-2-1-1 成本模型</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n142"><a class="md-toc-inner" href="#3-2-2-实验原理目前有哪些常用的乘法算法他们的原理是什么">3-2-2 实验原理：目前有哪些常用的乘法算法？他们的原理是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n143"><a class="md-toc-inner" href="#3-2-2-1-平凡的算法简单但有效">3-2-2-1 平凡的算法：简单但有效</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n154"><a class="md-toc-inner" href="#3-2-2-2-常数优化压位高精度与二进制">3-2-2-2 常数优化：压位高精度与二进制</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n252"><a class="md-toc-inner" href="#3-2-2-3-分治算法机遇与挑战">3-2-2-3 分治算法：机遇与挑战</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n279"><a class="md-toc-inner" href="#3-2-3-实验器材倍率测试方法c语言实现）">3-2-3 实验器材：倍率测试方法（c++语言实现）</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n280"><a class="md-toc-inner" href="#3-2-3-1-倍率测试">3-2-3-1 倍率测试</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n307"><a class="md-toc-inner" href="#3-2-3-2-c11-的chrono库--stopwatch类">3-2-3-2 c++11 的chrono库 &amp; StopWatch类</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n315"><a class="md-toc-inner" href="#3-2-3-3-进程测试-or-代码引入测试-">3-2-3-3 进程测试 or 代码引入测试 ？</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n411"><a class="md-toc-inner" href="#3-2-4-实验内容与结论不同乘法算法库的性能比较实验">3-2-4 实验内容与结论：不同乘法算法库的性能比较实验。</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n412"><a class="md-toc-inner" href="#3-2-4-1-目前有哪些知名的大整数类库他们有哪些特点">3-2-4-1 目前有哪些知名的大整数类库？他们有哪些特点？</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n465"><a class="md-toc-inner" href="#3-2-4-2-使用这些库之后如何编译代码">3-2-4-2 使用这些库之后，如何编译代码？</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n509"><a class="md-toc-inner" href="#3-2-4-3-实验数据处理">3-2-4-3 实验数据处理</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n602"><a class="md-toc-inner" href="#3-2-4-4-实验结论">3-2-4-4 实验结论</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n606"><a class="md-toc-inner" href="#part-4---difficulties--solutions">Part 4 - Difficulties &amp; Solutions</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n607"><a class="md-toc-inner" href="#4-1-如何处理输入如何进行输出如何对程序进行测试">4-1 如何处理输入？如何进行输出？如何对程序进行测试？</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n608"><a class="md-toc-inner" href="#4-1-1-io的选择">4-1-1 io的选择</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n656"><a class="md-toc-inner" href="#4-1-2-不同输入方式的处理命令行参数和运行时读参">4-1-2 不同输入方式的处理：命令行参数和运行时读参</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n703"><a class="md-toc-inner" href="#4-2-如何对输入数据进行抽象">4-2 如何对输入数据进行抽象？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n746"><a class="md-toc-inner" href="#4-3-如何高效实现乘法算法">4-3 如何高效实现乘法算法？</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n748"><a class="md-toc-inner" href="#part-5---summary">Part 5 - Summary</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n763"><a class="md-toc-inner" href="#参考文献">参考文献</a></span></p></div><h2><a name="part-1---analysis" class="md-header-anchor"></a><span>Part 1 - Analysis</span></h2><blockquote><p><span>在这一部分，我将分析本次project所要设计的程序所应该达到的目标，并且提出一些具体的、不同层次的问题。这些问题不会在本部分即被提出解决方案，我们将在第二、第三部分看到我们代码能够解决这些问题，实现这些目标，并且在Part4看到详细的解决方案与解释。</span></p></blockquote><h3><a name="1-1-the-goal-of-this-project" class="md-header-anchor"></a><span>1-1 The goal of this project</span></h3><p><span>我们需要使用C++程序设计语言来设计一个乘法器。什么是一个C++程序设计语言实现的乘法器？和Java语言设计的乘法器有何不同？用户将如何使用我们的乘法器？这是我们首先要考虑的问题。经过研究，一个C++设计的乘法器应该满足以下几点：</span></p><ul><li><p><span>该乘法器必须是一个</span><strong><span>系统程序</span></strong><span>级的乘法器。</span></p><p><span>	</span><span>C++是一门偏重于系统程序设计的通用程序设计语言。所谓系统程序，就意味着其能够直接使用硬件资源，并且其性能受限于资源。</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span>拿我们的乘法器来说，我们需要想象，它是工作在一个计算速度特别慢的嵌入式系统上、或者我们抛给它的乘法计算任务是特别复杂的、规模很大的，在这样的情况下，我们的程序需要能够胜任系统程序的称号，保证在合理的时间内给出正确的结果。</span></p><p><span>	</span><span>既然有系统程序，相应的就有应用程序，应用程序调用系统程序来完成自己的任务。比如，一个规模庞大的科学计算程序，需要不断地使用乘法（大数乘法），我们需要保证如果这个程序多次使用我们的乘法器去帮它完成任务，我们的乘法器是值得信赖的。当然，在这种情况下很少说调用乘法器作为一个进程去计算，一般那个科学计算程序自己就得包含相应的代码，或者以动态链接库的形式调用我们（我们依然要保证代码是系统程序级的零开销），这里我们仅作简单的讨论。</span></p></li><li><p><span>该乘法器</span><strong><span>正确使用</span></strong><span>C++提供的</span><strong><span>灵活且低开销的抽象机制</span></strong><span>，能够让开发者优雅愉悦地进行维护、迭代。</span></p><p><span>	</span><span>如果说我们的乘法器不同于Java的乘法器是因为Java不适合编写系统程序级的乘法器，那么我们的C++乘法器异于C语言的乘法器就在于我们充分地、正确地使用了C++的抽象机制。对于乘法器而言，我们主要研究一下几个抽象：大整数类对于大整数的抽象；cout、cin对输入输出的抽象；string类对字符串的抽象。由于只上了两周课，还没有讲到C++的类，我主要从其api接口（使用方法）与java的风格的不同之处入手，做一些简单的讨论。</span></p></li><li><p><span>该乘法器是</span><strong><span>安全可靠</span></strong><span>的，可以处理其职责范围之内的异常情况。</span></p><p><span>	</span><span>如果输入的不是整数怎么办？我们需要抛出一个异常。由于我们是个乘法器，我们并不能知道为什么给我们的输入是错的，以及这种情况怎么处理，我们早点抛出异常，就能早点让知道怎么处理的上层程序去正确的处理异常。</span></p><p><span>	</span><span>此外，我们的内存管理也应该是正确的。比如对于类而言，应该遵循RAII原则。对于一个大整数类而言，我们通常是在栈上创建一个大整数变量，然后使用它，那么当大整数销毁时，应该把它拥有的资源释放掉。</span></p></li></ul><h3><a name="1-2-some-problems-to-consider" class="md-header-anchor"></a><span>1-2 Some problems to consider</span></h3><ul><li><span>1.如何处理project文档中提到的，不同的输入方式？</span></li><li><span>2.如何对输入数据进行抽象？</span></li><li><span>3.如何高效实现乘法算法？</span></li></ul><h2><a name="part-2---code" class="md-header-anchor"></a><span>Part 2 - Code</span></h2><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="cpp" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="cpp"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//mul.cpp 版本1（版本2见 3-2-4）</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;iostream&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include "BigInt.hpp"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-def">main</span>(<span class="cm-variable-3">int</span> <span class="cm-variable">argc</span>, <span class="cm-variable-3">char</span> <span class="cm-variable-3">*</span><span class="cm-variable">argv</span>[]){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">//preparation</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">using</span> <span class="cm-keyword">namespace</span> <span class="cm-def">std</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">ios_base::sync_with_stdio</span>(<span class="cm-atom">false</span>);<span class="cm-comment">//make cin, cout faster //we don't need printf, scanf here.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">//we only want 2 arguments, or no argument from the command line.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">if</span> (<span class="cm-variable">argc</span> <span class="cm-operator">&gt;</span> <span class="cm-number">3</span>){ </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"too many arguments."</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-operator">-</span><span class="cm-number">1</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">BigInt</span> <span class="cm-variable">integerA</span>, <span class="cm-variable">integerB</span>;<span class="cm-comment">//default to be 0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">switch</span> (<span class="cm-variable">argc</span>){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">case</span> <span class="cm-number">2</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"too few argument."</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-operator">-</span><span class="cm-number">1</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">case</span> <span class="cm-number">1</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//if there is no argument, we ask for two integers. &nbsp; &nbsp;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"Please input two integers"</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cin</span> <span class="cm-operator">&gt;&gt;</span> <span class="cm-variable">integerA</span> <span class="cm-operator">&gt;&gt;</span> <span class="cm-variable">integerB</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">break</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">default</span>:<span class="cm-comment">//equally case 3</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//first convert c-style strings to cpp standard strings, </span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//then we use strings to construct big integers.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">integerA</span> <span class="cm-operator">=</span> <span class="cm-variable">string</span>(<span class="cm-variable">argv</span>[<span class="cm-number">1</span>]);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">integerB</span> <span class="cm-operator">=</span> <span class="cm-variable">string</span>(<span class="cm-variable">argv</span>[<span class="cm-number">2</span>]);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">break</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span><span class="cm-variable">integerA</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">" "</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">integerB</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">" = "</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">integerA</span><span class="cm-operator">*</span><span class="cm-variable">integerB</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>; &nbsp;<span class="cm-comment">// operator * has been overrided in class BigInt</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-number">0</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 762px;"></div><div class="CodeMirror-gutters" style="display: none; height: 762px;"></div></div></div></pre><p><span>Note：BigInt.hpp is from </span><a href='https://github.com/faheel/BigInt'><span>faheel/BigInt: Arbitrary-sized integer class for C++ (github.com)</span></a></p><p><span>Important: </span></p><ul><li><span>Since this isn&#39;t a dsaa class after all, plus we haven&#39;t learnt the concepts of cpp class, I would implement neither the best big integer multiplication algorithm nor the best-designed c++ class by myself. </span></li><li><strong><span>For this project, I shall explain my perference between different libraries, and explain how to compile such libraries</span><span>[^3-2-4]</span><span>, in order to review and gain an thorough comprehension of the contents covered by the first two lectures.</span></strong></li><li><span>also， I will try to implement a demo bigint.</span></li></ul><h2><a name="part-3---result--verification" class="md-header-anchor"></a><span>Part 3 - Result &amp; Verification</span></h2><h3><a name="3-1-computation-result-correctness" class="md-header-anchor"></a><span>3-1 computation result correctness</span></h3><h4><a name="3-1-1-basic-cases" class="md-header-anchor"></a><span>3-1-1 basic cases</span></h4><ul><li><p><span>compilation</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913183911975.png" referrerpolicy="no-referrer" alt="image-20210913183911975"></p></li><li><p><span>case 1</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913184422352.png" referrerpolicy="no-referrer" alt="image-20210913184422352"></p></li><li><p><span>case 2</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913184513660.png" referrerpolicy="no-referrer" alt="image-20210913184513660"></p><p>&nbsp;</p></li><li><p><span>case 3</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913184606771.png" referrerpolicy="no-referrer" alt="image-20210913184606771"></p></li></ul><h4><a name="3-1-2-negative-numbers" class="md-header-anchor"></a><span>3-1-2 negative numbers</span></h4><ul><li><p><span>case 1</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913184649203.png" referrerpolicy="no-referrer" alt="image-20210913184649203"></p></li><li><p><span>case 2</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913184737969.png" referrerpolicy="no-referrer" alt="image-20210913184737969"></p></li></ul><h4><a name="3-1-3-invalid-input" class="md-header-anchor"></a><span>3-1-3 invalid input</span></h4><ul><li><p><span>case 1</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913185027603.png" referrerpolicy="no-referrer" alt="image-20210913185027603"></p><p><span>note：这一异常是在构造BigInt时抛出的，我选用的这个BigInt类考虑到了这个情况。</span></p><p><span>如果它没考虑，我就要写个函数isInvalidNumber，然后先去掉首位的-+或者没有-+，然后查找字符串有没有非数字存在，最后和他一样：</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913185306327.png" referrerpolicy="no-referrer" alt="image-20210913185306327"></p><p><span>注意，如果使用int，就没有这个好处，int被istream&gt;&gt;时，如果没有读到int，就会很奇怪的退出。</span></p></li></ul><h4><a name="3-1-4-big-integer" class="md-header-anchor"></a><span>3-1-4 big integer</span></h4><ul><li><p><span>case 1</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913190028441.png" referrerpolicy="no-referrer" alt="image-20210913190028441"></p></li><li><p><span>case 2</span></p><p><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210913190130732.png" referrerpolicy="no-referrer" alt="image-20210913190130732"></p></li></ul><p><span>note：以上结果（包括3-1-1到3-1-4）均通过python的shell进行验证，计算结果是正确的。</span></p><h3><a name="3-2-time-complexity-experiment不同乘法算法的时间复杂度测试实验" class="md-header-anchor"></a><span>3-2 time complexity experiment：不同乘法算法的时间复杂度测试实验</span></h3><blockquote></blockquote><h4><a name="3-2-1-实验模型乘法算法的输入模型与成本模型" class="md-header-anchor"></a><span>3-2-1 实验模型：乘法算法的输入模型与成本模型</span></h4><h5><a name="3-2-1-1-输入模型" class="md-header-anchor"></a><span>3-2-1-1 输入模型</span></h5><ul><li><p><span>当我们的系统程序级的乘法器在计算一个很大的数时，如何回答一个核心问题：“我们的程序将会运行多久？”</span></p><ul><li><span>我们知道，程序的运行时间和程序</span><strong><span>输入数据的规模</span></strong><span>、输入数据的特点是息息相关的。</span></li><li><span>为了了解我们的程序的性能，乃至预测其面对新的问题时的性能</span></li><li><span>我们需要首先对输入的规模进行精确的描述。</span></li><li><span>否则，我们空谈O(n^2)、O(n)等术语是无效的。因为</span><strong><span>不同的输入模型下，我们的程序的所谓“增长数量级“是不一样的。</span></strong><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup></li></ul></li><li><p><span>对于我们的乘法器而言，我们需考虑如下问题：</span></p></li><li><p><span>对于输入 整数n * 整数m， 问题的规模是多少？</span></p><ul><li><span>例如，99*1234的规模是多少？</span></li><li><span>有些同学会说，问题的规模就是整数的大小嘛，输入的数越大，当然就越难算。</span></li><li><span>于是，有的同学就回答说，问题的规模是99或者1234，看到1234比99大，所以问题的规模是1234.</span></li></ul></li><li><p><span>“输入的数越大，当然就越难算。”, 这句话本身是对的，但是如何刻画输入的数有多大，其实还是要</span><strong><span>根据我们算法的计算方式（基本操作的定义）去进行建模。</span></strong></p><ul><li><span>举个例子，100* 12345678 = 1234567800</span></li><li><span>我们的算法如果是这样的：看到是100，直接把00往后面加。</span></li><li><span>那么我们计算的步骤就有12个（看到两个0，抄一遍12345678，加上两个0）.</span></li><li><span>那么 对于问题 1000000000000 * 12345678</span></li><li><span>我们计算的步骤数为32个步骤（看到12个0，抄一遍12345678，加上12个0）</span></li><li><strong><span>按照上面那位同学的说法，我们问题的规模增加了10^10次方倍，但是实际上，我们的步骤数几乎没有增加。他的模型是不合理的。</span></strong></li></ul></li><li><p><span>从上面的步骤中，其实我们已经发现了一个更加适合刻画乘法算法的输入模型，那就是：</span><strong><span>把输入的整数的位数（长度）作为输入规模</span></strong><span>。</span></p><ul><li><span>在上面的例子中，我们无论是看到0、抄写一遍数字还是加上0，我们“看到”、“抄写”、“加上”这些基本动作的次数都是与整数的位数有关的。</span></li><li><span>比如，我们要加上12次0，是因为输入就是有13位。</span></li></ul></li></ul><h5><a name="3-2-1-1-成本模型" class="md-header-anchor"></a><span>3-2-1-1 成本模型</span></h5><ul><li><span>程序的运行时间取决于 基本操作（机器指令）的单条执行时间（由CPU等决定），与基本操作执行的频率（由代码逻辑决定）。</span></li><li><span>而成本模型则是重新定义基本操作，只考虑重要的基本操作的频率</span><sup class='md-footnote'><a href='#dfref-footnote-2-1' name='ref-footnote-2-1'>2</a></sup></li><li><span>这里对于乘法，我们假定程序用string来存储大整数，那么我们的成本模型仅考虑对string的访问次数（包括读写）.</span></li></ul><h4><a name="3-2-2-实验原理目前有哪些常用的乘法算法他们的原理是什么" class="md-header-anchor"></a><span>3-2-2 实验原理：目前有哪些常用的乘法算法？他们的原理是什么？</span></h4><h5><a name="3-2-2-1-平凡的算法简单但有效" class="md-header-anchor"></a><span>3-2-2-1 平凡的算法：简单但有效</span></h5><p><span>最简单的算法就是模拟竖式计算乘法。</span></p><p><span>注意，实现的细节与竖式乘法略有不同：</span></p><ul><li><span>竖式乘法要把中间结果抄一遍在中间，但是我们的算法可以直接对结果数组的相应位置加上相应的数</span></li><li><span>同时，我们可以最后才处理进位。</span></li><li><span>我们写竖式乘法时，纸和笔是无限的，但是我们的数组长度有限，需要合理的规划。</span></li></ul><p><span>这种算法的时间复杂度是O(n^2)。</span></p><h5><a name="3-2-2-2-常数优化压位高精度与二进制" class="md-header-anchor"></a><span>3-2-2-2 常数优化：压位高精度与二进制</span></h5><ul><li><p><span>压位高精度是指，对于数组的存储进行优化。</span></p><ul><li><span>因为int或者unsigned int性能比较优秀，我们要迁就c/c++和有关的计算机环境，对整数的表示也是使用int数组</span></li><li><span>而不是{0-9}数组, 这就与我们的竖式乘法不一样。</span></li><li><strong><span>如果我们还是存0-9的数，无论是空间上（存储过长）还是时间上（问题的规模增加数倍）都不合适</span></strong></li><li><strong><span>如果我们分组来存，每一组存原本的4-5位</span></strong></li><li><span>那么效率就会成倍提高。</span></li><li><span>这种方法也可以理解成把10进制数转换为10000进制数。</span></li><li><span>注意，时间复杂度的增长级别没有降低。</span></li></ul></li><li><p><span>二进制是指，用二进制来存储整数。</span></p><ul><li><span>二进制乘法虽然也是竖式，但是其效率要高。</span></li><li><strong><span>原因在于，如果是0的话，可以直接continue</span></strong></li><li><strong><span>如果是1的话，可以把另一个整数移位之后加到结果上。</span></strong></li><li><span>这样，遍历的次数就只剩下1的个数，然后复制、移位操作如果再CPU层面的话，是可以并行的，可能可以把n变成1</span></li><li><span>这样我们效率有了一定的提高</span></li><li><span>但是注意，</span><strong><span>我们真的需要用1和0去表示二进制吗？</span></strong></li></ul></li><li><p><span>什么转成二进制？本来都是二进制！</span></p><ul><li><span>注意，int本质上就是一个二进制的位模式</span></li><li><span>而int被解释成int，只是十进制的显示而已，</span></li><li><span>而刚才压位高精度中我们定义的10000进制，也只是一个定义，</span></li><li><span>我们完全可以修改这个定义，改成2的多少次方。</span></li><li><span>而string的数据也就是char的数组，char也是一个整数。</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup></li><li><span>我们刚才为什么要努力做压位高精度，不就是为了让二进制的计算更加少、更加高效吗？</span></li><li><span>如果我们用1和0的数组去表示，完全是错误的高层抽象。</span></li></ul></li><li><p><span>二进制快在哪？</span></p><ul><li><span>我们所说的二进制，是压位二进制</span></li><li><span>其修改的只是压位进制（数组相邻两个元素的基数比）的定义</span></li><li><span>其实质是利用“是一移一位，是零不用管”的策略，来提高效率的。</span></li><li><span>而且我们还要考虑，转换成二进制，其实长度就变长了许多，我们的1不见得比原来的十进制的数要少</span></li></ul></li><li><p><span>二进制慢在哪？</span></p><ul><li><span>用户输入的是10进制、要求输出的也是10进制</span></li><li><span>我们如果用二进制来表示，我们需要做进制转换</span></li><li><span>最简单的进制转换算法，那就是实现那个进制的高精度算法，然后一位一位加上去。</span></li><li><span>那样，我们呈现结果的时候就要多算一次。</span></li><li><span>但是，我们需要每次计算都呈现结果吗？</span></li><li><span>显然不是的。</span></li><li><strong><span>我们只在计算结束的时候输出结果</span></strong><span>。</span></li><li><span>用户给我们的计算任务，一般都是复杂的，我们计算过程应该保证尽可能快，而呈现结果的一点代价，可以忽略不计。</span></li></ul></li><li><p><span>延伸思考：bitset</span></p><ul><li><span>c++还提供了一个类，叫做bitset</span></li><li><span>这个bitset是用集合去实现的，比如，1000100</span></li><li><span>因为右数第2位、第6位是1，所以存为{2,6}</span></li><li><span>如果要对这个位模式进行左移位，就变成{3,7}</span></li><li><span>这样，对于很长的数， bitset的存储是高效的。</span></li><li><span>如果用这种表示方法来抽象二进制的表示，是不是能实现一个更加高效的大整数呢？</span></li><li><span>笔者将在之后尝试。</span></li></ul></li></ul><h5><a name="3-2-2-3-分治算法机遇与挑战" class="md-header-anchor"></a><span>3-2-2-3 分治算法：机遇与挑战</span></h5><ul><li><p><span>以上的压位高精度和二进制优化，都不能改变O(n^2)的实质。</span></p></li><li><p><span>而Karatsuba利用分治算法，成功解决了这一问题。</span></p><ul><li><p><span>karatsuba算法把大数拆分成两部分，比如x=123 y=45, 从右数第一位分开</span></p><ul><li><span>x=12×10+3,  y=4×10+5</span></li><li><span>xy = (（12×4）×100 + （12×5+3×4）×10+3×5)</span></li></ul></li><li><p><span>因为加法是O（n）的，可以当成常数了</span></p><ul><li><span>然后12×4等，就是递归的更小的乘法，需要做4个乘法</span></li><li><span>karatsuba改进后只需要三次乘法</span></li><li><span>这就让递归方程式解出来的算法复杂度就不一样了，变快了。</span></li></ul></li></ul></li><li><p><span>然而我们注意到，这种算法需要多次加法，常数比较高。</span></p></li><li><p><span>所以我们需要进行实现，检查适合使用karatsuba算法的阈值。</span></p></li></ul><h4><a name="3-2-3-实验器材倍率测试方法c语言实现）" class="md-header-anchor"></a><span>3-2-3 实验器材：倍率测试方法（c++语言实现）</span></h4><h5><a name="3-2-3-1-倍率测试" class="md-header-anchor"></a><span>3-2-3-1 倍率测试</span></h5><ul><li><p><span>在3-2-2中，我们已经分析已有算法的复杂度。我们注意到，他们都能够在多项式时间内完成任务。</span></p><ul><li><span>因此，我们可以说，乘法算法的时间函数T(n) ~ an</span><sup><span>b</span></sup><span>. （~表示等价无穷大，见</span><sup class='md-footnote'><a href='#dfref-footnote-2-2' name='ref-footnote-2-2'>2</a></sup><span>），其中b由上述算法决定，a由算法和机器都有关系。</span></li></ul></li><li><p><span>我们不仅要从理论上了解、分析乘法的算法，接下来，我们还要通过实验，来验证我们的理论猜想。这样，我们才能给出结论，指导乘法器的开发。那么如何通过实验来测试一个算法的复杂度呢？</span></p><ul><li><span>我们可以这样，通过生成规模为不同的n的数据，然后测量程序运行的时间，最后通过统计方法，拟合T（n），从而确定a和b的值。</span></li></ul></li><li><p><span>如何选定数据的规模呢？</span></p><ul><li><span>我们采用一种叫做 </span><strong><span>倍率测试</span></strong><span> 的方法来选定数据的规模。这种方法是说，每次实验都选用上一次实验m倍的规模，然后如果我们的程序运行时间也增加了m倍，那么b的值就被测试出来是1，如果增加了m^2倍，那么b的值就被测试出来是2，换句话说，算法是n方的。</span></li></ul></li><li><p><span>倍率测试的代码逻辑如下：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="cpp" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="cpp"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;iostream&gt;</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;string&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;sstream&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include "../StopWatch.hpp"</span><span class="cm-comment">//implement later in 3-2-3-2</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;gmpxx.h&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">using</span> <span class="cm-keyword">namespace</span> <span class="cm-def">std</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">long</span> <span class="cm-variable-3">long</span> <span class="cm-def">time_trail</span>(<span class="cm-keyword">const</span> <span class="cm-variable">string</span><span class="cm-operator">&amp;</span> <span class="cm-variable">val1</span>, <span class="cm-keyword">const</span> <span class="cm-variable">string</span><span class="cm-operator">&amp;</span> <span class="cm-variable">val2</span>){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; <span class="cm-comment">//implement later in 3-2-3-3</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">void</span> <span class="cm-def">doubling_test</span>(<span class="cm-variable-3">int</span> <span class="cm-variable">most_testing_seconds</span>){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">StopWatch</span> <span class="cm-variable">sw</span>; <span class="cm-comment">//最长测试时间</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">for</span> (<span class="cm-variable-3">int</span> <span class="cm-variable">i</span> <span class="cm-operator">=</span> <span class="cm-number">1</span>; <span class="cm-variable">sw</span>.<span class="cm-variable">elapsedMicroSecond</span>()<span class="cm-operator">*</span><span class="cm-number">0.000001</span><span class="cm-operator">&lt;</span><span class="cm-variable">most_testing_seconds</span>; <span class="cm-variable">i</span><span class="cm-operator">&lt;&lt;=</span><span class="cm-number">1</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">stringstream</span> <span class="cm-variable">val_str</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for</span> (<span class="cm-variable-3">int</span> <span class="cm-variable">j</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable">j</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">i</span>; <span class="cm-operator">++</span><span class="cm-variable">j</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">val_str</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">"9"</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cout</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">i</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">","</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">time_trail</span>(<span class="cm-variable">val_str</span>.<span class="cm-variable">str</span>(), <span class="cm-variable">val_str</span>.<span class="cm-variable">str</span>())<span class="cm-operator">&lt;&lt;</span><span class="cm-variable">endl</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-def">main</span>(<span class="cm-variable-3">int</span> <span class="cm-variable">argc</span>, <span class="cm-variable-3">char</span> <span class="cm-variable-3">*</span><span class="cm-variable">argv</span>[]){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">doubling_test</span>(<span class="cm-number">10</span>);<span class="cm-comment">//只测试10s</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 515px;"></div><div class="CodeMirror-gutters" style="display: none; height: 515px;"></div></div></div></pre><ul><li><span>其中，我们数据生成的方法是，生成n长度的9.</span></li><li><span>比如，测试规模是2，那么我们就测试99*99</span></li><li><span>测试规模是4，那么我们就测试9999*9999</span></li></ul></li></ul><h5><a name="3-2-3-2-c11-的chrono库--stopwatch类" class="md-header-anchor"></a><span>3-2-3-2 c++11 的chrono库 &amp; StopWatch类</span></h5><ul><li><strong><span>chrono</span></strong><span> 是c++11引入的一个时间库，旨在解决程序计时出现的精度不足和不支持跨平台等问题。这个库实现了纳秒级的高精度时钟，并且对于时间点、时间长度有着比较好的定义。</span></li><li><span>我们使用chrono来实现一个StopWatch c++类，该类在被初始化时记录下时间，然后再被查看的时候告诉我们过去了多少时间。</span></li><li><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210918174858370.png" referrerpolicy="no-referrer" alt="image-20210918174858370"></li></ul><h5><a name="3-2-3-3-进程测试-or-代码引入测试-" class="md-header-anchor"></a><span>3-2-3-3 进程测试 or 代码引入测试 ？</span></h5><ul><li><p><span>进程测试，即把被测试的算法当做一个独立的进程。</span></p><ul><li><span>通过传递命令行参数，等待进程结束，</span></li><li><span>我们可以测得进程运行的时间。</span></li></ul></li><li><p><span>代码引入测试，即将乘法器的乘法函数或者大整数类复制或包含到测试器中。</span></p><ul><li><span>通过函数调用传递参数，等待函数执行结束，</span></li><li><span>我们可以测得函数运行的时间。</span></li></ul></li><li><p><span>无论是哪种测试，</span><strong><span>其实质都是对乘法算法的用时进行测试</span></strong><span>。</span></p><ul><li><span>如果我们不知道乘法器的源代码，或者没有相应库的dll文件，我们就不能通过函数调用来测试，只好通过进程测试。</span></li><li><span>不过，现在我们可以知道乘法器的源代码。</span></li><li><span>我们应该选用</span><strong><span>误差小</span></strong><span>的方法来进行测试，以保证实验的说服力。</span></li></ul></li><li><p><span>误差分析：</span></p><ul><li><p><span>进程测试的代码如下</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="cpp"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="cpp"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">const</span> <span class="cm-variable">string</span> <span class="cm-variable">tested_path</span> <span class="cm-operator">=</span> <span class="cm-string">"pwsh -Command \"../mul.exe"</span>; <span class="cm-comment">//pwsh指令</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">long</span> <span class="cm-variable-3">long</span> <span class="cm-def">time_trail</span>(<span class="cm-keyword">const</span> <span class="cm-variable">string</span><span class="cm-operator">&amp;</span> <span class="cm-variable">val1</span>, <span class="cm-keyword">const</span> <span class="cm-variable">string</span><span class="cm-operator">&amp;</span> <span class="cm-variable">val2</span>){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">StopWatch</span> <span class="cm-variable">sw</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">stringstream</span> <span class="cm-variable">command</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">command</span> <span class="cm-operator">&lt;&lt;</span><span class="cm-variable">tested_path</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">" "</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">val1</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">" "</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">val2</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">" |out-null \""</span>; <span class="cm-comment">//out-null阻止输出9*9 = 81这样的结果</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">system</span>(<span class="cm-variable">command</span>.<span class="cm-variable">str</span>().<span class="cm-variable">c_str</span>());</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">sw</span>.<span class="cm-variable">elapsedMicroSecond</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 202px;"></div><div class="CodeMirror-gutters" style="display: none; height: 202px;"></div></div></div></pre><ul><li><p><span>实验数据如下：</span></p></li><li><figure><table><thead><tr><th><span>1</span></th><th><span>2</span></th><th><span>4</span></th><th><span>8</span></th><th><span>16</span></th><th><span>32</span></th><th><span>64</span></th><th><span>128</span></th><th><span>256</span></th><th><span>512</span></th><th><span>1024</span></th><th><span>2048</span></th><th><span>4096</span></th></tr></thead><tbody><tr><td><span>1545901</span></td><td><span>1279314</span></td><td><span>1210483</span></td><td><span>1212000</span></td><td><span>1212360</span></td><td><span>1216989</span></td><td><span>1185216</span></td><td><span>1170615</span></td><td><span>1206700</span></td><td><span>1207964</span></td><td><span>1294143</span></td><td><span>1301303</span></td><td><span>命令行太长。</span></td></tr></tbody></table></figure></li><li><p><span>可以看到，时间随着问题规模的增大并没有增大，而是保持稳定。</span></p></li><li><p><span>这说明，命令行、操作系统进程间通信等时间&gt;&gt;算法执行时间，导致算法的实验测定时间与问题规模无关。</span></p></li><li><p><span>因此，</span><strong><span>我们不能把进程测试方法的实验测定时间当做算法执行的时间。</span></strong></p></li></ul></li><li><p><span>代码引入测试的time_trail函数代码如下</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="cpp"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="cpp"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">long</span> <span class="cm-variable-3">long</span> <span class="cm-def">time_trail</span>(<span class="cm-keyword">const</span> <span class="cm-variable">string</span><span class="cm-operator">&amp;</span> <span class="cm-variable">val1</span>, <span class="cm-keyword">const</span> <span class="cm-variable">string</span><span class="cm-operator">&amp;</span> <span class="cm-variable">val2</span>){</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">StopWatch</span> <span class="cm-variable">sw</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">BigInt</span>(<span class="cm-variable">val1</span>)<span class="cm-operator">*</span><span class="cm-variable">BigInt</span>(<span class="cm-variable">val2</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">sw</span>.<span class="cm-variable">elapsedMicroSecond</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 112px;"></div><div class="CodeMirror-gutters" style="display: none; height: 112px;"></div></div></div></pre><figure><table><thead><tr><th><span>1</span></th><th><span>2</span></th><th><span>4</span></th><th><span>8</span></th><th><span>16</span></th><th><span>32</span></th><th><span>64</span></th><th><span>128</span></th></tr></thead><tbody><tr><td><span>0</span></td><td><span>0</span></td><td><span>0</span></td><td><span>0</span></td><td><span>0</span></td><td><span>0</span></td><td><span>0</span></td><td><span>1990</span></td></tr></tbody></table></figure></li><li><p><span>注意到一开始速度太快，没法计时</span></p></li><li><p><span>所以，我们改进一下，让time_trail会重复执行*操作100次，并且舍弃掉前面的数据(9</span><span>*</span><span>9和99</span><span>*</span><span>99的差异不明显)。</span></p></li></ul></li></ul><h4><a name="3-2-4-实验内容与结论不同乘法算法库的性能比较实验" class="md-header-anchor"></a><span>3-2-4 实验内容与结论：不同乘法算法库的性能比较实验。</span></h4><h5><a name="3-2-4-1-目前有哪些知名的大整数类库他们有哪些特点" class="md-header-anchor"></a><span>3-2-4-1 目前有哪些知名的大整数类库？他们有哪些特点？</span></h5><ul><li><p><span>在3-2-2中我们讨论了人们发明的各种大数乘法的算法，并进行了简单的原理分析。</span></p><ul><li><span>那么实际应用中，有哪些大整数类库比较出名呢？他们可以用吗？</span></li></ul></li><li><p><span>经过搜索，我们找到如下结果</span></p><ul><li><p><span>其他语言</span></p><ul><li><p><span>Java BigInteger类</span></p><ul><li><span>使用了二进制来表示数据</span></li><li><span>根据数的大小来决定使用普通算法、Karatsuba算法、Toom-cook 算法中的一个。</span></li><li><span>使用Java语言实现，没有用到native的cpp代码。</span><sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup><sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup></li></ul></li><li><p><span>python Number类型</span></p><ul><li><span>使用了二进制来表示数据</span></li><li><span>根据数的大小来决定使用普通算法、Karatsuba算法这两个中的一个。</span></li><li><span>使用C语言实现</span><sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup></li></ul></li></ul></li><li><p><span>c++ </span><a href='https://github.com/faheel/BigInt'><span>faheel/BigInt: Arbitrary-sized integer class for C++ (github.com)</span></a><span> （github排名高\star多\issue都有解决方法）</span></p><ul><li><span>使用十进制表示数据</span></li><li><span>只是用Karatsuba算法，没有决策分析。</span></li><li><span>使用cpp语言实现</span></li></ul></li><li><p><span>c++  </span><strong><span>The GNU MP Bignum Library</span></strong><span> （知名自由软件开发计划GNU 开发）</span></p><ul><li><span>使用二进制表示数据</span></li><li><span>根据数的大小，决定使用普通算法、karatsuba算法、不同的toom算法、乃至FFT算法。</span><sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup></li><li><span>使用c语言实现的c库，但是提供了cpp接口。</span></li><li><span>可以看到，这个库考虑最为周全。</span></li></ul></li><li><p>&nbsp;</p></li></ul></li></ul><h5><a name="3-2-4-2-使用这些库之后如何编译代码" class="md-header-anchor"></a><span>3-2-4-2 使用这些库之后，如何编译代码？</span></h5><ul><li><p><span>fahell/BigInt:</span></p><ul><li><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210918222742269.png" referrerpolicy="no-referrer" alt="image-20210918222742269"></li><li><span>可以看到，这种库叫做“single header file”的库，对于使用者来说非常方便。</span></li><li><span>简单地查了一下，其实开发的时候，他们写了很多文件，按照cpp开发规范写的。</span></li><li><span>但是最后release的时候，他们把不同的文件手工合并起来，形成一个.h文件。</span></li><li><span>这样，对于我来说，我没有任何编译的麻烦。</span></li><li><span>include这个库，就和include </span><iostream><span>一样自然。</span></li></ul></li><li><p><span>GNU MP Bignum Library </span></p><ul><li><p><span>第一步：解压 gmp-6.2.1.tar.lz</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">sudo</span> apt install lzip</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lzip <span class="cm-attribute">-d</span> gmp-6.2.1.tar.lz</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">tar xvf gmp-6.2.1.tar</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 67px;"></div><div class="CodeMirror-gutters" style="display: none; height: 67px;"></div></div></div></pre></li><li><p><span>第二步：安装到linux</span><sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">./configure &nbsp;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">make</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">sudo</span> <span class="cm-builtin">make</span> install</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 67px;"></div><div class="CodeMirror-gutters" style="display: none; height: 67px;"></div></div></div></pre><p><span>可以看到，这个库很大气，configure检查了很久，仔细确认我的gcc支不支持各种年代的c语言的操作。然后make有很壮观，成堆的gcc命令闪烁在屏幕当中，让人不经佩服。</span></p></li><li><p><span>第三步：编译我的程序</span><sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup></p></li></ul></li></ul><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="cpp" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="cpp"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//mul.cpp 版本2(版本一见Part2)</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;iostream&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include "GMPxx.h"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-def">main</span>(<span class="cm-variable-3">int</span> <span class="cm-variable">argc</span>, <span class="cm-variable-3">char</span> <span class="cm-variable-3">*</span><span class="cm-variable">argv</span>[]){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">//preparation</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">using</span> <span class="cm-keyword">namespace</span> <span class="cm-def">std</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">ios_base::sync_with_stdio</span>(<span class="cm-atom">false</span>);<span class="cm-comment">//make cin\cout faster //we don't need printf\scanf here.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">//we only want 2 arguments, or no argument from the command line.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">if</span> (<span class="cm-variable">argc</span> <span class="cm-operator">&gt;</span> <span class="cm-number">3</span>){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"too many arguments."</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-operator">-</span><span class="cm-number">1</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">mpz_class</span> &nbsp;<span class="cm-variable">integerA</span>, <span class="cm-variable">integerB</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">switch</span> (<span class="cm-variable">argc</span>){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">case</span> <span class="cm-number">2</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"too few argument."</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-operator">-</span><span class="cm-number">1</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">case</span> <span class="cm-number">1</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//if there is no argument, we ask for two integers.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"Please input two integers"</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">cin</span> <span class="cm-operator">&gt;&gt;</span> <span class="cm-variable">integerA</span> <span class="cm-operator">&gt;&gt;</span> <span class="cm-variable">integerB</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">break</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">default</span>:<span class="cm-comment">//equally case 3</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//first convert c-style strings to cpp standard strings,</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//then we use strings to construct mpz_class.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">integerA</span> <span class="cm-operator">=</span> <span class="cm-variable">string</span>(<span class="cm-variable">argv</span>[<span class="cm-number">1</span>]);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">integerB</span> <span class="cm-operator">=</span> <span class="cm-variable">string</span>(<span class="cm-variable">argv</span>[<span class="cm-number">2</span>]);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">break</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span><span class="cm-variable">integerA</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">" * "</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">integerB</span><span class="cm-operator">&lt;&lt;</span><span class="cm-string">" = "</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">integerA</span><span class="cm-operator">*</span><span class="cm-variable">integerB</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>; &nbsp;<span class="cm-comment">// operator * has been overrided in mpz_class </span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-number">0</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 762px;"></div><div class="CodeMirror-gutters" style="display: none; height: 762px;"></div></div></div></pre><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#编译指令</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">g<span class="cm-operator">++</span> mul.cpp <span class="cm-attribute">-lgmpxx</span> <span class="cm-attribute">-lgmp</span> <span class="cm-attribute">-o</span> mul </span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 45px;"></div><div class="CodeMirror-gutters" style="display: none; height: 45px;"></div></div></div></pre><p><span>			</span><span>这部分有些难度，官方的tutorial找了很久没找到。</span></p><ul><li><p><span>总结：为什么gmp不是一个头文件，编译又那么复杂呢？</span></p><ul><li><span>问题就在于，gmp是一个巨大的工程。</span></li><li><span>如果我们每次都要include gmp，然后把整个工程都编译一遍，那么我们项目编译的速度就是很慢的。</span></li><li><span>反之，如果我们以动态链接库的形式，比如make install到Ubuntu系统，那么不仅我们不用再次编译，而且其他程序要用到gmp的话，也不用自己去定位gmpxx.h的位置。</span></li><li><span>opencv也是类似的。</span></li></ul></li></ul><h5><a name="3-2-4-3-实验数据处理" class="md-header-anchor"></a><span>3-2-4-3 实验数据处理</span></h5><p><span>前面我们已经给出了倍率测试的代码，现在我们编译并运行，记录实验数据，使用excel来处理数据。</span></p><ul><li><span>gmp的测试</span></li></ul><figure><table><thead><tr><th><span>问题规模（n/位）</span></th><th><span>1</span></th><th><span>2</span></th><th><span>4</span></th><th><span>8</span></th><th><span>16</span></th><th><span>32</span></th><th><span>64</span></th><th><span>128</span></th><th><span>256</span></th><th><span>512</span></th><th><span>1024</span></th><th><span>2048</span></th><th><span>4096</span></th><th><span>8192</span></th><th><span>16384</span></th><th><span>32768</span></th><th><span>65536</span></th><th><span>131072</span></th><th><span>262144</span></th><th><span>524288</span></th><th><span>1048576</span></th></tr></thead><tbody><tr><td><span>求解时间（t/ms）</span></td><td><span>37</span></td><td><span>16</span></td><td><span>15</span></td><td><span>18</span></td><td><span>19</span></td><td><span>25</span></td><td><span>38</span></td><td><span>68</span></td><td><span>129</span></td><td><span>285</span></td><td><span>713</span></td><td><span>1707</span></td><td><span>4404</span></td><td><span>12572</span></td><td><span>34515</span></td><td><span>94703</span></td><td><span>283109</span></td><td><span>846142</span></td><td><span>2475611</span></td><td><span>4496290</span></td><td><span>7714063</span></td></tr></tbody></table></figure><p><span>倍率计算：（时间比例是某次时间与上一次时间的比例，b的值则是log</span><sub><span>2</span></sub><span>时间比例）</span></p><p><img src="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project1\report.assets\image-20210919151117499.png" referrerpolicy="no-referrer" alt="image-20210919151117499"></p><p><span>经过实验处理，我们可以认为b=</span><strong><span>1.02193</span></strong><span>， 而a的值不是我们研究的重点（如果要研究a的话，我们可以画出log-log图像，做直线拟合）。这个数值接近于1。</span></p><ul><li><span>BigInt的测试</span></li></ul><figure><table><thead><tr><th><span>问题规模（n/位）</span></th><th><span>1</span></th><th><span>2</span></th><th><span>4</span></th><th><span>8</span></th><th><span>16</span></th><th><span>32</span></th><th><span>64</span></th><th><span>128</span></th><th><span>256</span></th><th><span>512</span></th><th><span>1024</span></th><th><span>2048</span></th><th><span>4096</span></th><th><span>8192</span></th></tr></thead><tbody><tr><td><span>求解时间（t/ms）</span></td><td><span>196</span></td><td><span>153</span></td><td><span>160</span></td><td><span>178</span></td><td><span>2652</span></td><td><span>12471</span></td><td><span>47111</span></td><td><span>156372</span></td><td><span>491495</span></td><td><span>1783774</span></td><td><span>5869792</span></td><td><span>16776494</span></td><td><span>50745462</span></td><td><span>161046600</span></td></tr></tbody></table></figure><p><img src="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project1\report.assets\image-20210919151545017.png" referrerpolicy="no-referrer" alt="image-20210919151545017"></p><p><span>经过实验处理，我们可以认为b=</span><strong><span>1.907088</span></strong><span>，这个数值接近于2。</span></p><h5><a name="3-2-4-4-实验结论" class="md-header-anchor"></a><span>3-2-4-4 实验结论</span></h5><ul><li><span>GMP库无论是常数还是算法增长数量级，都远远超过bigint库。</span></li><li><span>我们应该使用gmp库。</span></li></ul><h2><a name="part-4---difficulties--solutions" class="md-header-anchor"></a><span>Part 4 - Difficulties &amp; Solutions</span></h2><h3><a name="4-1-如何处理输入如何进行输出如何对程序进行测试" class="md-header-anchor"></a><span>4-1 如何处理输入？如何进行输出？如何对程序进行测试？</span></h3><h4><a name="4-1-1-io的选择" class="md-header-anchor"></a><span>4-1-1 io的选择</span></h4><ul><li><p><span>我们知道，C++兼容C，因此即可以用printf、scanf，又可以使用std::cout、std::cin。</span></p><ul><li><span>在网上论坛和平时的同学讨论中，我们常常会听到这样一些说法 ”printf是c语言的，c语言底层！肯定快！能用printf就用printf！“ ”我是搞信息竞赛的，之前有道题我算法写得太烂了，过不了，然后我试着把cout改成printf，结果过了，从此我就一直用printf。对了，scanf也别用，比赛的时候手写一个int快读！“</span></li><li><span>这些说法固然有其计算机语言历史发展乃至实用主义的道理，然而其对于C/C++语言特别是C++语言的设计目的的认识是片面的。</span></li></ul></li><li><p><span>c++设计的一个目的，就在于所谓的</span><strong><span>零开销原则</span></strong><sup class='md-footnote'><a href='#dfref-footnote-1-1' name='ref-footnote-1-1'>1</a></sup></p><ul><li><p><em><span>零开销原则</span></em><span>是 C++ 设计原则，所说的是：</span></p><ol start='' ><li><span>你无需为你所不用的付出。</span></li><li><span>你所用的正与你所能合理手写的效率相同。</span><sup class='md-footnote'><a href='#dfref-footnote-10' name='ref-footnote-10'>10</a></sup></li></ol></li><li><p><span>cin和cout作为c++的一个基本的语言特性或者说抽象机制（对输入输出的抽象），从语言的设计角度来说，是不可能比你用更加底层的c语言性能差很多。如果存在一个程序员能够用手工的方法（比如说“写个快读”），取用更加底层的puts、gets去模拟cin&gt;&gt;i，那么就会有很多人去效仿， 也就违背了C++程序设计语言设计的初衷。</span></p></li></ul></li><li><p><span>说了这么多思想，那么实际上C++的cin、cout表现如何呢？</span></p><ul><li><p><span>这里有一个简单的测评</span><a href='https://stackoverflow.com/questions/1042110/using-scanf-in-c-programs-is-faster-than-using-cin'><span>Using scanf() in C++ programs is faster than using cin? - Stack Overflow</span></a></p></li><li><p><span>可以看到，如果不要求C++兼容C的输入输出，那么C++的效率更高。</span></p></li><li><p><span>为什么cin、cout快？主要原因是：</span></p><ul><li><span>scanf、printf需要运行时解析字符串,再决定如何输出</span></li><li><span>cin、cout在编译时就可以确定调用哪个operator。</span></li></ul></li></ul></li><li><p><span>另外，还有一种说法，说printf的好处在于格式化字符串，填入一个东西，而cout只能各输各的。对于这种说法</span></p><ul><li><span>我认为有一定的道理。如果拿java去比较，java也认为printf很重要（String都要有个format方法），而java实现c++的cout这种“不同类型我都可以输出”的方法更加优雅，java是通过Object类的toString()，基本类型使用工具类或者加上空字符串来转换、其他类继承重写来实现这一点的。</span></li><li><span>但是，你不能说纯粹的c++就没有这种格式控制的输入输出</span></li><li><span>我们知道，所谓的格式控制输出，实际上最主要的用途应该是对int、float、double这样的基本类型的格式控制（比如保留几位小数、几进制输出）而言的。（而不是实现“不同类型我都可以输出”）</span></li><li><iomanip><span>就是这样c++风格的一个解决方案。</span></li><li><span>通过导入这个头文件，我们可以设置cout下一个输出的进制、填充、精度等，可以说是十分方便。</span><sup class='md-footnote'><a href='#dfref-footnote-11' name='ref-footnote-11'>11</a></sup></li></ul></li></ul><h4><a name="4-1-2-不同输入方式的处理命令行参数和运行时读参" class="md-header-anchor"></a><span>4-1-2 不同输入方式的处理：命令行参数和运行时读参</span></h4><ul><li><p><span>命令行参数</span></p><ul><li><p><span>命令行参数输入，也就是通过</span></p></li><li><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">./mul [number1] [number2]</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre></li><li><p><span>的方式进行输入</span></p></li><li><p><span>它的好处是方便进程间管道调用，从而使得</span></p><ul><li><span>我们的程序能够为其他程序提供工具</span></li><li><span>我们的程序可以被命令行测试.</span><span>[^3-2-3-3]</span></li></ul></li></ul></li><li><p><span>运行时读参</span></p><ul><li><span>运行时读参则是没有命令行参数的两个数字的情况下，请求用户输入两个数字作为输入。</span></li><li><span>这个过程如何加速，我们在4-1-1已经进行了探讨。</span></li></ul></li><li><p><span>根据参数的数量进行调整</span></p><ul><li><span>如果参数有两个，那么就是命令行参数读入。</span></li><li><span>如果是0个，那么就是运行时读参</span></li><li><span>如果只有1个，或者多于三个，我们有责任提醒用户出现了错误，并且退出程序。</span></li><li><span>注意事项：c/cpp的argc计数，记录的是包括自己路径（或者命令，不同编译器不同）的参数数，比上文所述的参数数量多一个。</span></li></ul></li><li><p><span>了解了命令行参数和运行时读参之后，我们马上想到下一个问题：读入的参数的类型是什么?</span></p><ul><li><span>我们知道，命令行参数是char*类型的数组，表示一系列的参数，每一个参数是char</span><span>*</span><span>类型的</span></li><li><span>然而，我们在运行时读参的话，不一定要读入char*类型。</span></li><li><span>如何才能合理地处理这一情况？</span></li><li><span>换句话说，我们如何对输入数据进行抽象？</span></li></ul></li></ul><h3><a name="4-2-如何对输入数据进行抽象" class="md-header-anchor"></a><span>4-2 如何对输入数据进行抽象？</span></h3><ul><li><p><span>输入的数据，是两个等待被乘的整数，那么很自然我们想到用int类型去抽象它们。</span></p><ul><li><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="cpp"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="cpp"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//simple.cpp</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">#include &lt;iostream&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-def">main</span>(<span class="cm-variable-3">int</span> <span class="cm-variable">argc</span>, <span class="cm-variable-3">char</span> <span class="cm-variable-3">*</span><span class="cm-variable">argv</span>[]){</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">using</span> <span class="cm-keyword">namespace</span> <span class="cm-def">std</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable-3">int</span> <span class="cm-variable">a</span>, <span class="cm-variable">b</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">cin</span><span class="cm-operator">&gt;&gt;</span><span class="cm-variable">a</span><span class="cm-operator">&gt;&gt;</span><span class="cm-variable">b</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">cout</span><span class="cm-operator">&lt;&lt;</span><span class="cm-variable">a</span><span class="cm-operator">*</span><span class="cm-variable">b</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 179px;"></div><div class="CodeMirror-gutters" style="display: none; height: 179px;"></div></div></div></pre></li></ul></li><li><p><span>然而，这种抽象方式有如下问题：</span></p><ul><li><p><span>无法处理异常输入</span></p><ul><li><img src="C:\Users\叶璨铭\AppData\Roaming\Typora\typora-user-images\image-20210918150854377.png" referrerpolicy="no-referrer" alt="image-20210918150854377"></li><li><span>对于异常输出，cin&lt;&lt;将b的值赋值为0，而不是报出一个异常推出程序。</span></li><li><span>这就给出了错误的a*b结果。</span></li></ul></li><li><p><span>无法让 命令行参数和运行时读参 两种方式统一</span></p></li><li><p><span>无法处理超过int范围的整数</span></p></li></ul></li><li><p><span>因此，我们需要先读入两个string，对string分析无误后，使用string来表示这两个数的数据。</span></p></li><li><p><span>由于string的长度是无限的（受限于实际设备系统环境），而且不会有输入错误，我们就解决了上述问题。</span></p><ul><li><span>那么，我们如何对string表示的数来高效地进行乘法计算呢？</span></li><li><span>注意，string不一定是最终的答案。我们的数据可以进一步被抽象为int数组、char数组、bitset，可以按照二进制，也可以十进制表示。因此，我们的讨论只是解决了输入的抽象。</span></li></ul></li><li><p><span>事实上，我们需要的是一个</span><strong><span>抽象数据类型</span></strong><span>。抽象数据类型将函数与数据关联起来</span><sup class='md-footnote'><a href='#dfref-footnote-2-3' name='ref-footnote-2-3'>2</a></sup><span>。具体来说，一个大整数类，可以把大数乘法、大数加法、大数除法、大数减法等函数与大整数的表示方式（比如string，也可以是数组）关联在一起，以类型的方式呈现在用户面前。</span></p></li><li><p><span>cpp的抽象数据类型和java类似，都是用类的概念去表示的。</span></p></li><li><p><span>但是cpp的类和java的类差异很大。</span></p><ul><li><span>cpp的设计目标之一，就是让用户使用类定义的类型，仿佛就和使用内置类型一样，既没有api上的区别，也没有效率上的区别。</span><sup class='md-footnote'><a href='#dfref-footnote-1-2' name='ref-footnote-1-2'>1</a></sup></li><li><span>为了达到这一目标，c++的很多设计都是和java不同的。</span></li></ul></li></ul><h3><a name="4-3-如何高效实现乘法算法" class="md-header-anchor"></a><span>4-3 如何高效实现乘法算法？</span></h3><p><span>见 3-2 的详细分析。</span><sup class='md-footnote'><a href='#dfref-footnote-12' name='ref-footnote-12'>12</a></sup></p><h2><a name="part-5---summary" class="md-header-anchor"></a><span>Part 5 - Summary</span></h2><ul><li><p><span>通过本次project，</span></p><ul><li><span>了解了大数乘法的不同算法及其时间复杂度</span></li><li><span>学习了C++编程的一些思想</span></li><li><span>了解了C++编程中如何编译使用了库的程序</span></li></ul></li><li><p><span>得出结论，C++编程中遇到处理大数乘法的问题时，应该使用知名的GMP库。如果要自己实现的话，应该使用压位高精度存储数据，然后根据数的大小来选择最合适的算法来求解。</span></p></li><li><p><span>可以说，本次project很有收获，对以后的project的制作提供了经验。</span></p></li></ul><h3><a name="参考文献" class="md-header-anchor"></a><span>参考文献</span></h3><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>本贾尼·斯特劳斯特鲁普, 斯特劳斯特鲁普, 王刚,等. C++程序设计语言[M]. 机械工业出版社, 2016.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='回到文档' class='reversefootnote' >↩</a> <a name='dfref-footnote-1-1' href='#ref-footnote-1-1' title='回到文档' class='reversefootnote' >↩</a> <a name='dfref-footnote-1-2' href='#ref-footnote-1-2' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <span>算法：第四版/ （美）塞奇威克， （美）韦恩 著；谢路云译. ——人民邮电出版社。(2020.5)</span> <a name='dfref-footnote-2' href='#ref-footnote-2' title='回到文档' class='reversefootnote' >↩</a> <a name='dfref-footnote-2-1' href='#ref-footnote-2-1' title='回到文档' class='reversefootnote' >↩</a> <a name='dfref-footnote-2-2' href='#ref-footnote-2-2' title='回到文档' class='reversefootnote' >↩</a> <a name='dfref-footnote-2-3' href='#ref-footnote-2-3' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <span>于仕琪. week1.pdf, week2课件.pdf </span> <a name='dfref-footnote-3' href='#ref-footnote-3' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> <a href='https://www.zhihu.com/question/36725424'><span>java的BigInteger的乘法运算是用什么算法实现的？ - 知乎 (zhihu.com)</span></a> <a name='dfref-footnote-4' href='#ref-footnote-4' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> <span>jdk11的BigInteger类，查找native关键字，没有native出现。</span> <a name='dfref-footnote-5' href='#ref-footnote-5' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> <a href='https://github.com/python/cpython/blob/main/Objects/longobject.c'><span>cpython/longobject.c at main · python/cpython (github.com)</span></a> <a name='dfref-footnote-6' href='#ref-footnote-6' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>7</span> <a href='https://gmplib.org/manual/Multiplication-Algorithms'><span>Multiplication Algorithms (GNU MP 6.2.1) (gmplib.org)</span></a> <a name='dfref-footnote-7' href='#ref-footnote-7' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>8</span> <a href='https://gmplib.org/manual/Installing-GMP'><span>Installing GMP (GNU MP 6.2.1) (gmplib.org)</span></a> <a name='dfref-footnote-8' href='#ref-footnote-8' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>9</span> <a href='https://gmplib.org/manual/C_002b_002b-Interface-General'><span>C++ Interface General (GNU MP 6.2.1) (gmplib.org)</span></a> <a name='dfref-footnote-9' href='#ref-footnote-9' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>10</span> <a href='https://www.apiref.com/cpp-zh/cpp/language/Zero-overhead_principle.html'><span>零开销原则 - C++中文 - API参考文档 (apiref.com)</span></a> <a name='dfref-footnote-10' href='#ref-footnote-10' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>11</span> <a href='https://zh.cppreference.com/w/cpp/header/iomanip'><span>标准库头文件  - cppreference.com</span></a> <a name='dfref-footnote-11' href='#ref-footnote-11' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>12</span> <span>在这一部分，我们将按照确定理论模型、搜集资料分析、实验验证的思路，从浅入深，全面分析乘法算法的时间复杂度。最后，我们将给出结论，分析何时使用什么样的算法是更优的，从而为我们c++实现的系统级乘法器的高效性提供可靠的依据。</span> <a name='dfref-footnote-12' href='#ref-footnote-12' title='回到文档' class='reversefootnote' >↩</a></div></div></div>
+</body>
+</html>

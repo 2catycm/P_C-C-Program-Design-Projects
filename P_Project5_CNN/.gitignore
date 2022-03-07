@@ -1,0 +1,8 @@
+project_doc/
+build/
+cmake-build-debug-visual/
+cmake-build-release/
+bin/
+.vscode/
+lib/
+resources/

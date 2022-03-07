@@ -1,0 +1,10 @@
+ find_package(OpenCV REQUIRED)
+ message(STATUS "OpenCV library status:")
+ message(STATUS "    config: ${OpenCV_DIR}")
+ message(STATUS "    version: ${OpenCV_VERSION}")
+ message(STATUS "    libraries: ${OpenCV_LIBS}")
+ message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
+ include_directories(${OpenCV_INCLUDE_DIRS})
+
+# add_library(FaceClassifier ../include/FaceClassifier.ipp)
+# target_link_libraries(FaceClassifier PRIVATE ${OpenCV_LIBS})

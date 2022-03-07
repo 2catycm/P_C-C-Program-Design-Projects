@@ -1,0 +1,50 @@
+﻿//struct TrivialMatrix* read_trivial_matrix_from_file(const char* filename) //malloc a new one and return the address.
+//{
+//    //IO cost：文件读入到char*
+//    FILE* file = fopen(filename, "r");
+//    if (file == NULL) {
+//        puts("Fatal Error: File not found.");
+//        puts("matrix multiplication terminated.");
+//        exit(-1);
+//    }
+//    size_t file_length = file_len(file);            //fseek
+///*        while (fscanf(file, "%f", data+k)!=EOF){
+//
+//        k++;
+//    }*/
+//    fseek(file, 0L, SEEK_SET);
+//    char* content = (char*)calloc(file_length, sizeof(char));
+////    fread(content, file_length, sizeof(char), file);
+//    fread(content, file_length+1, sizeof(char), file);
+//    content[file_length] = '\0';
+//    fclose(file);
+//    //char* parsing cost： char*解析空格、换行符，并解析为float*。 如果不需要矩阵的size，代码很短，但是现在需要size，所以要解析空格、换行符。
+//    size_t max_matrix_length = (file_length+1)/2; //根据文件大小，解不等式得到
+//    float* data = (float*)calloc(max_matrix_length, sizeof(float)); int k = 0;
+//    int rowCount = 0, columnCount = 0;int columnCountMax = INT32_MIN;
+//
+////    float element;
+////    char* line_token = strtok(content,"\n");
+////    while(line_token!=NULL){
+////
+////        line_token = strtok(NULL, "\n");
+////    } //不能处理eof
+//    char* line_token = (char*)calloc(max_matrix_length, sizeof(char));
+//    while (sscanf(content, "%[^\n]", line_token)){
+//        rowCount++;
+//        columnCount = 0;
+//        char* element_token = strtok(line_token," ");
+//        while(element_token!=NULL){
+//            columnCount++;
+//            sscanf(element_token, "%f", data+k);
+////            sscanf(element_token, "%f", &element);
+////            data[k++] = element;
+//            element_token = strtok(NULL, " ");
+//        }
+//        if (columnCount>columnCountMax) columnCountMax = columnCount;
+//    }
+//
+////    data = (float*)realloc(data,rowCount*columnCountMax);//防止太大
+//    //形成结构体并且指针返回。
+//    return _trivial_matrix(data, rowCount, columnCountMax);
+//}

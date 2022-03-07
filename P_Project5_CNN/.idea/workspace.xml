@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="P_Project5_CNN" targetName="combine" />
+      <config projectName="P_Project5_CNN" targetName="temp" />
+      <config projectName="P_Project5_CNN" targetName="combine_no" />
+      <config projectName="P_Project5_CNN" targetName="cnn_compute" />
+      <config projectName="P_Project5_CNN" targetName="returnreftest" />
+      <config projectName="P_Project5_CNN" targetName="fc_main" />
+      <config projectName="P_Project5_CNN" targetName="opencv_conv" />
+      <config projectName="P_Project5_CNN" targetName="temp1" />
+      <config projectName="P_Project5_CNN" targetName="matrix_test" />
+      <config projectName="P_Project5_CNN" targetName="mutable" />
+      <config projectName="P_Project5_CNN" targetName="test_move" />
+      <config projectName="P_Project5_CNN" targetName="fc_nn_benchmark" />
+      <config projectName="P_Project5_CNN" targetName="fc_video_stream" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug-Visual Studio" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Visual Studio" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=D:/EnglishStandardPath/DevelopEnvironment/vcpkg/scripts/buildsystems/vcpkg.cmake" />
+      <configuration PROFILE_NAME="Release-Visual Studio" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="Visual Studio" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=D:/EnglishStandardPath/DevelopEnvironment/vcpkg/scripts/buildsystems/vcpkg.cmake" />
+      <configuration PROFILE_NAME="Release-WSL" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="WSL" />
+      <configuration PROFILE_NAME="Debug-WSL" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="WSL" />
+      <configuration PROFILE_NAME="Debug-WSL-Coverage" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="WSL" GENERATION_OPTIONS="-DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a63bc4a-0dfd-4f7c-b46f-48f2f43b0e5b" name="Changes" comment="feat(benchmark, documentation)">
+      <change afterPath="$PROJECT_DIR$/sample/IntroductionAIHomework/cnn_compute.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Matrix/ChannelMajorMatrix.ipp" beforeDir="false" afterPath="$PROJECT_DIR$/include/Matrix/ChannelMajorMatrix.ipp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Matrix/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Matrix/Matrix.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/NeuronNetwork/NeuronNetwork.ipp" beforeDir="false" afterPath="$PROJECT_DIR$/include/NeuronNetwork/NeuronNetwork.ipp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_doc/caffe/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_doc/caffe/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/conv_gemm/opencv_conv.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sample/experiment/opencv_conv.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/fc_nn_benchmark.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sample/fc_nn_benchmark.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/fc_video_stream.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sample/fc_video_stream.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/test_move.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sample/test_move.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release-WSL" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="bugfix" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="ProjectId" id="225Mkr1zpNHInC9s6JE4SKoF5JN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.overridden" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../P Artinx/artinx-hub" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="settings.editor.splitter.proportion" value="0.2517839" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\sample" />
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\resources\samples" />
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\resources\weights" />
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\include\FaceClassifier" />
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\include\NeuronNetwork" />
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\include\matrix" />
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\project_doc\模板\特化与函数声明" />
+      <recent name="D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project5_CNN\include" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.fc_main">
+    <configuration name="cnn_compute" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="cnn_compute" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="cnn_compute">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="combine" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="combine" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="combine">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="combine_no" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="combine_no" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="combine_no">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fc_main" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../resources/samples/cat1.png" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="fc_main" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="fc_main">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fc_nn_benchmark" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="fc_nn_benchmark" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="fc_nn_benchmark">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fc_video_stream" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="fc_video_stream" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="fc_video_stream">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="matrix_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="matrix_test" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="matrix_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mutable" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="mutable" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="mutable">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="opencv_conv" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="opencv_conv" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="opencv_conv">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="returnreftest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="returnreftest" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="returnreftest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="temp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="temp" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="temp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="temp1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="temp1" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="temp1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_move" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="P_Project5_CNN" TARGET_NAME="test_move" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="P_Project5_CNN" RUN_TARGET_NAME="test_move">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="5.1conv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="P_Project5_CNN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_help" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_help/5.1conv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="5.3多输入和输出通道" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="P_Project5_CNN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_help" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_help/5.3多输入和输出通道.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="5.4池化" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="P_Project5_CNN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_help" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_help/5.4池化.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="P_Project5_CNN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project_doc/SimpleCNNbyCPP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project_doc/SimpleCNNbyCPP/demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.combine" />
+      <item itemvalue="CMake Application.combine_no" />
+      <item itemvalue="CMake Application.mutable" />
+      <item itemvalue="CMake Application.returnreftest" />
+      <item itemvalue="CMake Application.temp" />
+      <item itemvalue="CMake Application.temp1" />
+      <item itemvalue="CMake Application.cnn_compute" />
+      <item itemvalue="CMake Application.fc_main" />
+      <item itemvalue="CMake Application.fc_nn_benchmark" />
+      <item itemvalue="CMake Application.fc_video_stream" />
+      <item itemvalue="CMake Application.matrix_test" />
+      <item itemvalue="CMake Application.opencv_conv" />
+      <item itemvalue="CMake Application.test_move" />
+      <item itemvalue="Python.demo" />
+      <item itemvalue="Python.5.1conv" />
+      <item itemvalue="Python.5.3多输入和输出通道" />
+      <item itemvalue="Python.5.4池化" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.demo" />
+        <item itemvalue="Python.5.4池化" />
+        <item itemvalue="Python.5.3多输入和输出通道" />
+        <item itemvalue="Python.5.1conv" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a63bc4a-0dfd-4f7c-b46f-48f2f43b0e5b" name="Changes" comment="" />
+      <created>1639123140627</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639123140627</updated>
+      <workItem from="1639123142023" duration="43909000" />
+      <workItem from="1639235872637" duration="8113000" />
+      <workItem from="1639278258959" duration="1021000" />
+      <workItem from="1639279859048" duration="36362000" />
+      <workItem from="1639382711940" duration="7496000" />
+      <workItem from="1639488793741" duration="368000" />
+      <workItem from="1639498747734" duration="176000" />
+      <workItem from="1639536985002" duration="612000" />
+      <workItem from="1639627268945" duration="513000" />
+      <workItem from="1639670749095" duration="1455000" />
+      <workItem from="1639672689466" duration="1177000" />
+      <workItem from="1639705708824" duration="16022000" />
+      <workItem from="1639756349516" duration="75595000" />
+      <workItem from="1639930222263" duration="228000" />
+      <workItem from="1639998347489" duration="3403000" />
+      <workItem from="1640005317727" duration="1091000" />
+      <workItem from="1640074477999" duration="1706000" />
+      <workItem from="1640232374770" duration="257000" />
+      <workItem from="1640352285137" duration="145000" />
+      <workItem from="1640362295403" duration="1133000" />
+      <workItem from="1641991026538" duration="3655000" />
+      <workItem from="1642152902894" duration="17000" />
+      <workItem from="1642409843557" duration="2209000" />
+    </task>
+    <task id="LOCAL-00001" summary="惰性切片写乱了">
+      <created>1639223923994</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639223923994</updated>
+    </task>
+    <task id="LOCAL-00002" summary="形状写出来了，但是切片不能互转">
+      <created>1639230888983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639230888983</updated>
+    </task>
+    <task id="LOCAL-00003" summary="stack逻辑">
+      <created>1639281976189</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639281976189</updated>
+    </task>
+    <task id="LOCAL-00004" summary="模板学习">
+      <created>1639316008250</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639316008250</updated>
+    </task>
+    <task id="LOCAL-00005" summary="尝试实现卷积">
+      <created>1639331309908</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639331309908</updated>
+    </task>
+    <task id="LOCAL-00006" summary="勉强写出来，测试不通过">
+      <created>1639382783781</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639382783781</updated>
+    </task>
+    <task id="LOCAL-00007" summary="卷积算对了">
+      <created>1639734414128</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639734414128</updated>
+    </task>
+    <task id="LOCAL-00008" summary="矩阵大改，初步编译通过">
+      <created>1639800507746</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639800507746</updated>
+    </task>
+    <task id="LOCAL-00009" summary="编译错误的maxpool">
+      <created>1639841165176</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1639841165176</updated>
+    </task>
+    <task id="LOCAL-00010" summary="bugfix分支：卷积，没有maxpool的版本">
+      <created>1639841903950</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1639841903950</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat：maxpool 无bug">
+      <created>1639849220904</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1639849220904</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat：卷积泛化">
+      <created>1639851444899</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1639851444899</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat：done.">
+      <created>1639888377588</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1639888377588</updated>
+    </task>
+    <task id="LOCAL-00014" summary="bugfix(clear before full connection forward)&#10;feat(visualize_classify)&#10;todo: benchmark">
+      <created>1639897048529</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1639897048529</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat(benchmark, documentation)">
+      <created>1639930022063</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1639930022063</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="惰性切片写乱了" />
+    <MESSAGE value="形状写出来了，但是切片不能互转" />
+    <MESSAGE value="stack逻辑" />
+    <MESSAGE value="模板学习" />
+    <MESSAGE value="尝试实现卷积" />
+    <MESSAGE value="勉强写出来，测试不通过" />
+    <MESSAGE value="卷积算对了" />
+    <MESSAGE value="矩阵大改，初步编译通过" />
+    <MESSAGE value="编译错误的maxpool" />
+    <MESSAGE value="bugfix分支：卷积，没有maxpool的版本" />
+    <MESSAGE value="feat：maxpool 无bug" />
+    <MESSAGE value="feat：卷积泛化" />
+    <MESSAGE value="feat：done." />
+    <MESSAGE value="bugfix(clear before full connection forward)&#10;feat(visualize_classify)&#10;todo: benchmark" />
+    <MESSAGE value="feat(benchmark, documentation)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(benchmark, documentation)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sample/experiment/opencv_conv.cpp</url>
+          <line>27</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sample/matrix_test.cpp</url>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sample/matrix_test.cpp</url>
+          <line>11</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sample/test_move.cpp</url>
+          <line>10</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sample/matrix_test.cpp</url>
+          <line>33</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sample/NetWorkTest.cpp</url>
+          <line>8</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/FaceClassifier/FaceClassifier.ipp</url>
+          <line>60</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sample/fc_main.cpp</url>
+          <line>15</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sample/IntroductionAIHomework/cnn_compute.cpp</url>
+          <line>27</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project_doc/SimpleCNNbyCPP/demo.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/project_doc/SimpleCNNbyCPP/model.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="inputX" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../../EnglishStandardPath/Practice_File/P_C_Cpp/P_Project5_CNN/cmake-build-debug-wsl-coverage" NAME="fc_main Coverage Results" MODIFIED="1639891063284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

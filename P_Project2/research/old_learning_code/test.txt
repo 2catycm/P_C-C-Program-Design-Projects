@@ -1,0 +1,136 @@
+{
+  "context": {
+    "date": "2021-09-29 11:10:34",
+    "host_name": "Laptop10",
+    "executable": "./matmul_benchmark.exe",
+    "num_cpus": 16,
+    "mhz_per_cpu": 2894,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32000000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32000000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 512000000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 4096000000,
+        "num_sharing": 16
+      }
+    ],
+    "load_avg": [0,0,0],
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "test/32/iterations:10",
+      "run_name": "test/32/iterations:10",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 10,
+      "real_time": 3.4000004234258085e+02,
+      "cpu_time": 1.4999999999997652e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "test/32/iterations:10",
+      "run_name": "test/32/iterations:10",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 10,
+      "real_time": 1.1000001904903911e+02,
+      "cpu_time": 8.0000000000001947e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "test/64/iterations:10",
+      "run_name": "test/64/iterations:10",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 10,
+      "real_time": 1.2000000424450263e+02,
+      "cpu_time": 9.0000000000029303e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "test/128/iterations:10",
+      "run_name": "test/128/iterations:10",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 10,
+      "real_time": 1.2000000424450263e+02,
+      "cpu_time": 9.0000000000029303e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "test/256/iterations:10",
+      "run_name": "test/256/iterations:10",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 10,
+      "real_time": 1.3999997463542968e+02,
+      "cpu_time": 9.9999999999969901e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "test/512/iterations:10",
+      "run_name": "test/512/iterations:10",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 10,
+      "real_time": 1.4999995983089320e+02,
+      "cpu_time": 1.0999999999999724e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "test/1024/iterations:10",
+      "run_name": "test/1024/iterations:10",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 10,
+      "real_time": 1.5000005078036338e+02,
+      "cpu_time": 1.0999999999999724e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "test/2048/iterations:10",
+      "run_name": "test/2048/iterations:10",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 10,
+      "real_time": 9.0000003183376975e+02,
+      "cpu_time": 8.7000000000003752e+02,
+      "time_unit": "ns"
+    }
+  ]
+}

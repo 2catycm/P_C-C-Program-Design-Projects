@@ -1,0 +1,41 @@
+D:\开发工具\JetBrains\apps\CLion\ch-0\212.5284.51\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - NMake Makefiles" D:\EnglishStandardPath\Practice_File\P_C_Cpp\P_Project1\time_complexity_test
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+CMake Error at CMakeLists.txt:2 (project):
+  The CMAKE_C_COMPILER:
+
+    D:/EnglishStandardPath/DevelopTools/Microsoft Visual Studio 2019C/VC/Tools/MSVC/14.28.29333/bin/Hostx86/x86/cl.exe
+
+  is not a full path to an existing compiler tool.
+
+  To use the NMake generator with Visual C++, cmake must be run from a shell
+  that can use the compiler cl from the command line.  This environment is
+  unable to invoke the cl compiler.  To fix this problem, run cmake from the
+  Visual Studio Command Prompt (vcvarsall.bat).
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CC" or the CMake cache entry CMAKE_C_COMPILER to the full path to
+  the compiler, or to the compiler name if it is in the PATH.
+
+
+CMake Error at CMakeLists.txt:2 (project):
+  The CMAKE_CXX_COMPILER:
+
+    D:/EnglishStandardPath/DevelopTools/Microsoft Visual Studio 2019C/VC/Tools/MSVC/14.28.29333/bin/Hostx86/x86/cl.exe
+
+  is not a full path to an existing compiler tool.
+
+  To use the NMake generator with Visual C++, cmake must be run from a shell
+  that can use the compiler cl from the command line.  This environment is
+  unable to invoke the cl compiler.  To fix this problem, run cmake from the
+  Visual Studio Command Prompt (vcvarsall.bat).
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "D:/EnglishStandardPath/Practice_File/P_C_Cpp/P_Project1/time_complexity_test/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "D:/EnglishStandardPath/Practice_File/P_C_Cpp/P_Project1/time_complexity_test/cmake-build-debug/CMakeFiles/CMakeError.log".
+Cannot resolve compiler path 'D:/EnglishStandardPath/DevelopTools/Microsoft Visual Studio 2019C/VC/Tools/MSVC/14.28.29333/bin/Hostx86/x86/cl.exe'

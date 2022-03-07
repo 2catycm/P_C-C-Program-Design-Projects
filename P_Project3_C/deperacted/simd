@@ -1,0 +1,74 @@
+struct TrivialMatrix* matmul_simd_openmp(const struct TrivialMatrix* matrixA, const struct TrivialMatrix* matrixB) {
+    // openmp前提
+    int numberOfThreads; //读取线程数。
+#pragma omp parallel
+    {
+        numberOfThreads = omp_get_num_threads();
+    };
+    if(matrixB->columnCount % numberOfThreads != 0) //行向量与列向量的长度需要是8的倍数
+        return matmul_simd(matrixA, matrixB);
+    // simd 前提
+    if(matrixA->columnCount % 8 != 0) //行向量与列向量的长度需要是8的倍数
+        return matmul_openmp(matrixA, matrixB);
+    if(matrixA->columnCount != matrixB->rowCount) {
+        abort_with_message("Matrix multiplication of whose sizes do not match is not supported.");
+    }
+    struct TrivialMatrix* result = create_trivial_matrix(matrixA->rowCount, matrixB->columnCount);
+    //元素Cij是行向量Ai与列向量Bj的点乘
+    size_t i;
+    //#pragma omp parallel for //错！
+    for(i = 0; i < matrixA->rowCount; ++i) {
+        //        for(int j = 0; j < matrixB->columnCount; ++j) {
+        for(size_t j = 0; j < matrixB->columnCount; j += numberOfThreads) {
+#pragma omp parallel firstprivate(j)
+            {
+                j += omp_get_thread_num();
+                float element[8]; //用float 8位数组取回 256bit寄存器的结果。
+                __m256 a, b;      // Ai的8个元素和Bj的8个元素
+                __m256 sum;
+                sum = _mm256_setzero_ps();
+                for(size_t k = 0; k < matrixA->columnCount; k += 8) {
+                    //                result->data[i][j] += matrixA.data[i][k]*matrixB.data[k][j];
+                    a = _mm256_load_ps(&TrivialMatrixGetElement(matrixA, i, k));
+                    b = _mm256_load_ps(&TrivialMatrixGetElement(matrixB, k, j));
+                    sum = _mm256_add_ps(sum, _mm256_mul_ps(a, b));
+                }
+                _mm256_store_ps(element, sum);
+                TrivialMatrixGetElement(result, i, j) =
+                    element[0] + element[1] + element[2] + element[3] + element[4] + element[5] + element[6] + element[7];
+            }
+        }
+    }
+    return result;
+}
+
+struct TrivialMatrix* matmul_simd_openmp2(const struct TrivialMatrix* matrixA, const struct TrivialMatrix* matrixB) {
+    // simd 前提
+    if(matrixA->columnCount % 8 != 0) //行向量与列向量的长度需要是8的倍数
+        return matmul_openmp(matrixA, matrixB);
+    if(matrixA->columnCount != matrixB->rowCount) {
+        abort_with_message("Matrix multiplication of whose sizes do not match is not supported.");
+    }
+    struct TrivialMatrix* result = create_trivial_matrix(matrixA->rowCount, matrixB->columnCount);
+    //元素Cij是行向量Ai与列向量Bj的点乘
+    int i;
+#pragma omp parallel for //对的实际上是。证明的时候只需要看写元素
+    for(i = 0; i < matrixA->rowCount; ++i) {
+        for(size_t j = 0; j < matrixB->columnCount; ++j) {
+            float element[8]; //用float 8位数组取回 256bit寄存器的结果。
+            __m256 a, b;      // Ai的8个元素和Bj的8个元素
+            __m256 sum;
+            sum = _mm256_setzero_ps();
+            for(size_t k = 0; k < matrixA->columnCount; k += 8) {
+                //                result->data[i][j] += matrixA.data[i][k]*matrixB.data[k][j];
+                a = _mm256_load_ps(&TrivialMatrixGetElement(matrixA, i, k));
+                b = _mm256_load_ps(&TrivialMatrixGetElement(matrixB, k, j));
+                sum = _mm256_add_ps(sum, _mm256_mul_ps(a, b));
+            }
+            _mm256_store_ps(element, sum);
+            TrivialMatrixGetElement(result, i, j) =
+                element[0] + element[1] + element[2] + element[3] + element[4] + element[5] + element[6] + element[7];
+        }
+    }
+    return result;
+}

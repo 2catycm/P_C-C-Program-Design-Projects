@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/EnglishStandardPath/Practice_File/P_C_Cpp/P_Project1/time_complexity_test/StopWatch.hpp
+iostream
+-
+chrono
+-
+
+D:/EnglishStandardPath/Practice_File/P_C_Cpp/P_Project1/time_complexity_test/test_mul.cpp
+iostream
+-
+string
+-
+sstream
+-
+StopWatch.hpp
+D:/EnglishStandardPath/Practice_File/P_C_Cpp/P_Project1/time_complexity_test/StopWatch.hpp
+
